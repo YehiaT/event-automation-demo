@@ -36,15 +36,15 @@
       tags:
         - operator
 
-    - name: Setup operator
-      ansible.builtin.include_tasks: "{{ playbook_dir }}/../common/setup-operator.yaml"
-      vars:
-        catalogsource_name: "es-operator-catalog"
-        catalogsource_template: "{{ playbook_dir }}/templates/01-catalog-source.yaml"
-        subscription_name: "eventstreams-operator"
-        subscription_template: "{{ playbook_dir }}/templates/02-operator-subscription.yaml"
-      tags:
-        - operator
+    # - name: Setup operator
+    #   ansible.builtin.include_tasks: "{{ playbook_dir }}/../common/setup-operator.yaml"
+    #   vars:
+    #     catalogsource_name: "es-operator-catalog"
+    #     catalogsource_template: "{{ playbook_dir }}/templates/01-catalog-source.yaml"
+    #     subscription_name: "eventstreams-operator"
+    #     subscription_template: "{{ playbook_dir }}/templates/02-operator-subscription.yaml"
+    #   tags:
+    #     - operator
 
     - name: Create namespace for Event Automation
       ansible.builtin.include_tasks: "{{ playbook_dir }}/../common/setup-namespace.yaml"
